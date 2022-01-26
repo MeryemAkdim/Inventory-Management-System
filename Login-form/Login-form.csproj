@@ -1,0 +1,1160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AD6C15DD-C81F-4654-A95B-074E9F272BC3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Login_form</RootNamespace>
+    <AssemblyName>Login-form</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuColorTransition, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuColorTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuFormDock, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGauge, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuGauge.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGradientPanel, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuGradientPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGroupBox, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuGroupBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLoader, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPages, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPanel, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRating, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuRating.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSeparator, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuSeparator.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShadowPanel, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuShadowPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShapes, Version=5.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuShapes.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSlider, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSnackbar, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuSnackbar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextBox, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToggleSwitch, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuToggleSwitch.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToolTip, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTransition, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuUserControl, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuUserControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.Deprecated, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.Deprecated.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.4.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.4\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddCateg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCateg.Designer.cs">
+      <DependentUpon>AddCateg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddCus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCus.Designer.cs">
+      <DependentUpon>AddCus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOrder.Designer.cs">
+      <DependentUpon>AddOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddProd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProd.Designer.cs">
+      <DependentUpon>AddProd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddSup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSup.Designer.cs">
+      <DependentUpon>AddSup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CategMan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategMan.Designer.cs">
+      <DependentUpon>CategMan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerFrom.Designer.cs">
+      <DependentUpon>CustomerFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteCat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteCat.Designer.cs">
+      <DependentUpon>DeleteCat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteCust.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteCust.Designer.cs">
+      <DependentUpon>DeleteCust.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteOrd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteOrd.Designer.cs">
+      <DependentUpon>DeleteOrd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeletePro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeletePro.Designer.cs">
+      <DependentUpon>DeletePro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteSup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteSup.Designer.cs">
+      <DependentUpon>DeleteSup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Homeform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Homeform.Designer.cs">
+      <DependentUpon>Homeform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory_ManagementDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventory_ManagementDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory_ManagementDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventory_ManagementDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory_ManagementDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventory_ManagementDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory_ManagementDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventory_ManagementDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory_ManagementDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventory_ManagementDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory_ManagementDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventory_ManagementDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory_ManagementDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventory_ManagementDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory_ManagementDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventory_ManagementDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory_ManagementDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventory_ManagementDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory_ManagementDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventory_ManagementDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory_ManagementDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventory_ManagementDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory_ManagementDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventory_ManagementDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory_ManagementDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventory_ManagementDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory_ManagementDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventory_ManagementDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory_ManagementDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventory_ManagementDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory_ManagementDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventory_ManagementDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory_ManagementDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventory_ManagementDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory_ManagementDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventory_ManagementDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ManageUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageUsers.Designer.cs">
+      <DependentUpon>ManageUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderForm.Designer.cs">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prod.Designer.cs">
+      <DependentUpon>Prod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SellBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellBill.Designer.cs">
+      <DependentUpon>SellBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_ManagementDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock_ManagementDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_ManagementDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock_ManagementDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_ManagementDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock_ManagementDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_ManagementDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock_ManagementDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_ManagementDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock_ManagementDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_ManagementDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock_ManagementDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_ManagementDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock_ManagementDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_ManagementDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock_ManagementDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_ManagementDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock_ManagementDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_ManagementDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock_ManagementDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_ManagementDataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock_ManagementDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_ManagementDataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock_ManagementDataSet19.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_ManagementDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock_ManagementDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_ManagementDataSet20.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock_ManagementDataSet20.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_ManagementDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock_ManagementDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_ManagementDataSet22.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock_ManagementDataSet22.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_ManagementDataSet23.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock_ManagementDataSet23.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_ManagementDataSet24.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock_ManagementDataSet24.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_ManagementDataSet25.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock_ManagementDataSet25.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_ManagementDataSet26.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock_ManagementDataSet26.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_ManagementDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock_ManagementDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_ManagementDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock_ManagementDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_ManagementDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock_ManagementDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_ManagementDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock_ManagementDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_ManagementDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock_ManagementDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_ManagementDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock_ManagementDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_ManagementDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock_ManagementDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupplierForm.Designer.cs">
+      <DependentUpon>SupplierForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateCateg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateCateg.Designer.cs">
+      <DependentUpon>UpdateCateg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateCus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateCus.Designer.cs">
+      <DependentUpon>UpdateCus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateOrder.Designer.cs">
+      <DependentUpon>UpdateOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatePro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdatePro.Designer.cs">
+      <DependentUpon>UpdatePro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateSupcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateSupcs.Designer.cs">
+      <DependentUpon>UpdateSupcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddCateg.resx">
+      <DependentUpon>AddCateg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCus.resx">
+      <DependentUpon>AddCus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddOrder.resx">
+      <DependentUpon>AddOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddProd.resx">
+      <DependentUpon>AddProd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSup.resx">
+      <DependentUpon>AddSup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CategMan.resx">
+      <DependentUpon>CategMan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerFrom.resx">
+      <DependentUpon>CustomerFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteCat.resx">
+      <DependentUpon>DeleteCat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteCust.resx">
+      <DependentUpon>DeleteCust.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteOrd.resx">
+      <DependentUpon>DeleteOrd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeletePro.resx">
+      <DependentUpon>DeletePro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteSup.resx">
+      <DependentUpon>DeleteSup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Homeform.resx">
+      <DependentUpon>Homeform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageUsers.resx">
+      <DependentUpon>ManageUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderForm.resx">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prod.resx">
+      <DependentUpon>Prod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SellBill.resx">
+      <DependentUpon>SellBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplierForm.resx">
+      <DependentUpon>SupplierForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateCateg.resx">
+      <DependentUpon>UpdateCateg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateCus.resx">
+      <DependentUpon>UpdateCus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateOrder.resx">
+      <DependentUpon>UpdateOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatePro.resx">
+      <DependentUpon>UpdatePro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateSupcs.resx">
+      <DependentUpon>UpdateSupcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Inventory_ManagementDataSet.xsc">
+      <DependentUpon>Inventory_ManagementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory_ManagementDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inventory_ManagementDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inventory_ManagementDataSet.xss">
+      <DependentUpon>Inventory_ManagementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory_ManagementDataSet1.xsc">
+      <DependentUpon>Inventory_ManagementDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory_ManagementDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inventory_ManagementDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inventory_ManagementDataSet1.xss">
+      <DependentUpon>Inventory_ManagementDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory_ManagementDataSet10.xsc">
+      <DependentUpon>Inventory_ManagementDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory_ManagementDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inventory_ManagementDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inventory_ManagementDataSet10.xss">
+      <DependentUpon>Inventory_ManagementDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory_ManagementDataSet11.xsc">
+      <DependentUpon>Inventory_ManagementDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory_ManagementDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inventory_ManagementDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inventory_ManagementDataSet11.xss">
+      <DependentUpon>Inventory_ManagementDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory_ManagementDataSet12.xsc">
+      <DependentUpon>Inventory_ManagementDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory_ManagementDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inventory_ManagementDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inventory_ManagementDataSet12.xss">
+      <DependentUpon>Inventory_ManagementDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory_ManagementDataSet13.xsc">
+      <DependentUpon>Inventory_ManagementDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory_ManagementDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inventory_ManagementDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inventory_ManagementDataSet13.xss">
+      <DependentUpon>Inventory_ManagementDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory_ManagementDataSet14.xsc">
+      <DependentUpon>Inventory_ManagementDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory_ManagementDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inventory_ManagementDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inventory_ManagementDataSet14.xss">
+      <DependentUpon>Inventory_ManagementDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory_ManagementDataSet15.xsc">
+      <DependentUpon>Inventory_ManagementDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory_ManagementDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inventory_ManagementDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inventory_ManagementDataSet15.xss">
+      <DependentUpon>Inventory_ManagementDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory_ManagementDataSet16.xsc">
+      <DependentUpon>Inventory_ManagementDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory_ManagementDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inventory_ManagementDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inventory_ManagementDataSet16.xss">
+      <DependentUpon>Inventory_ManagementDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory_ManagementDataSet17.xsc">
+      <DependentUpon>Inventory_ManagementDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory_ManagementDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inventory_ManagementDataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inventory_ManagementDataSet17.xss">
+      <DependentUpon>Inventory_ManagementDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory_ManagementDataSet2.xsc">
+      <DependentUpon>Inventory_ManagementDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory_ManagementDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inventory_ManagementDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inventory_ManagementDataSet2.xss">
+      <DependentUpon>Inventory_ManagementDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory_ManagementDataSet3.xsc">
+      <DependentUpon>Inventory_ManagementDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory_ManagementDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inventory_ManagementDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inventory_ManagementDataSet3.xss">
+      <DependentUpon>Inventory_ManagementDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory_ManagementDataSet4.xsc">
+      <DependentUpon>Inventory_ManagementDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory_ManagementDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inventory_ManagementDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inventory_ManagementDataSet4.xss">
+      <DependentUpon>Inventory_ManagementDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory_ManagementDataSet5.xsc">
+      <DependentUpon>Inventory_ManagementDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory_ManagementDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inventory_ManagementDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inventory_ManagementDataSet5.xss">
+      <DependentUpon>Inventory_ManagementDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory_ManagementDataSet6.xsc">
+      <DependentUpon>Inventory_ManagementDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory_ManagementDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inventory_ManagementDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inventory_ManagementDataSet6.xss">
+      <DependentUpon>Inventory_ManagementDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory_ManagementDataSet7.xsc">
+      <DependentUpon>Inventory_ManagementDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory_ManagementDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inventory_ManagementDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inventory_ManagementDataSet7.xss">
+      <DependentUpon>Inventory_ManagementDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory_ManagementDataSet8.xsc">
+      <DependentUpon>Inventory_ManagementDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory_ManagementDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inventory_ManagementDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inventory_ManagementDataSet8.xss">
+      <DependentUpon>Inventory_ManagementDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory_ManagementDataSet9.xsc">
+      <DependentUpon>Inventory_ManagementDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="Inventory_ManagementDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Inventory_ManagementDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inventory_ManagementDataSet9.xss">
+      <DependentUpon>Inventory_ManagementDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Stock_ManagementDataSet.xsc">
+      <DependentUpon>Stock_ManagementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Stock_ManagementDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Stock_ManagementDataSet.xss">
+      <DependentUpon>Stock_ManagementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet1.xsc">
+      <DependentUpon>Stock_ManagementDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Stock_ManagementDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Stock_ManagementDataSet1.xss">
+      <DependentUpon>Stock_ManagementDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet10.xsc">
+      <DependentUpon>Stock_ManagementDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Stock_ManagementDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Stock_ManagementDataSet10.xss">
+      <DependentUpon>Stock_ManagementDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet11.xsc">
+      <DependentUpon>Stock_ManagementDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Stock_ManagementDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Stock_ManagementDataSet11.xss">
+      <DependentUpon>Stock_ManagementDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet12.xsc">
+      <DependentUpon>Stock_ManagementDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Stock_ManagementDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Stock_ManagementDataSet12.xss">
+      <DependentUpon>Stock_ManagementDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet13.xsc">
+      <DependentUpon>Stock_ManagementDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Stock_ManagementDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Stock_ManagementDataSet13.xss">
+      <DependentUpon>Stock_ManagementDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet14.xsc">
+      <DependentUpon>Stock_ManagementDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Stock_ManagementDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Stock_ManagementDataSet14.xss">
+      <DependentUpon>Stock_ManagementDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet15.xsc">
+      <DependentUpon>Stock_ManagementDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Stock_ManagementDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Stock_ManagementDataSet15.xss">
+      <DependentUpon>Stock_ManagementDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet16.xsc">
+      <DependentUpon>Stock_ManagementDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Stock_ManagementDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Stock_ManagementDataSet16.xss">
+      <DependentUpon>Stock_ManagementDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet17.xsc">
+      <DependentUpon>Stock_ManagementDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Stock_ManagementDataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Stock_ManagementDataSet17.xss">
+      <DependentUpon>Stock_ManagementDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet18.xsc">
+      <DependentUpon>Stock_ManagementDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Stock_ManagementDataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Stock_ManagementDataSet18.xss">
+      <DependentUpon>Stock_ManagementDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet19.xsc">
+      <DependentUpon>Stock_ManagementDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Stock_ManagementDataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Stock_ManagementDataSet19.xss">
+      <DependentUpon>Stock_ManagementDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet2.xsc">
+      <DependentUpon>Stock_ManagementDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Stock_ManagementDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Stock_ManagementDataSet2.xss">
+      <DependentUpon>Stock_ManagementDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet20.xsc">
+      <DependentUpon>Stock_ManagementDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet20.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Stock_ManagementDataSet20.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Stock_ManagementDataSet20.xss">
+      <DependentUpon>Stock_ManagementDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet21.xsc">
+      <DependentUpon>Stock_ManagementDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Stock_ManagementDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Stock_ManagementDataSet21.xss">
+      <DependentUpon>Stock_ManagementDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet22.xsc">
+      <DependentUpon>Stock_ManagementDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet22.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Stock_ManagementDataSet22.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Stock_ManagementDataSet22.xss">
+      <DependentUpon>Stock_ManagementDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet23.xsc">
+      <DependentUpon>Stock_ManagementDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet23.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Stock_ManagementDataSet23.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Stock_ManagementDataSet23.xss">
+      <DependentUpon>Stock_ManagementDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet24.xsc">
+      <DependentUpon>Stock_ManagementDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet24.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Stock_ManagementDataSet24.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Stock_ManagementDataSet24.xss">
+      <DependentUpon>Stock_ManagementDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet25.xsc">
+      <DependentUpon>Stock_ManagementDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet25.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Stock_ManagementDataSet25.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Stock_ManagementDataSet25.xss">
+      <DependentUpon>Stock_ManagementDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet26.xsc">
+      <DependentUpon>Stock_ManagementDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet26.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Stock_ManagementDataSet26.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Stock_ManagementDataSet26.xss">
+      <DependentUpon>Stock_ManagementDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet3.xsc">
+      <DependentUpon>Stock_ManagementDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Stock_ManagementDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Stock_ManagementDataSet3.xss">
+      <DependentUpon>Stock_ManagementDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet4.xsc">
+      <DependentUpon>Stock_ManagementDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Stock_ManagementDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Stock_ManagementDataSet4.xss">
+      <DependentUpon>Stock_ManagementDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet5.xsc">
+      <DependentUpon>Stock_ManagementDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Stock_ManagementDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Stock_ManagementDataSet5.xss">
+      <DependentUpon>Stock_ManagementDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet6.xsc">
+      <DependentUpon>Stock_ManagementDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Stock_ManagementDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Stock_ManagementDataSet6.xss">
+      <DependentUpon>Stock_ManagementDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet7.xsc">
+      <DependentUpon>Stock_ManagementDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Stock_ManagementDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Stock_ManagementDataSet7.xss">
+      <DependentUpon>Stock_ManagementDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet8.xsc">
+      <DependentUpon>Stock_ManagementDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Stock_ManagementDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Stock_ManagementDataSet8.xss">
+      <DependentUpon>Stock_ManagementDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet9.xsc">
+      <DependentUpon>Stock_ManagementDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="Stock_ManagementDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Stock_ManagementDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Stock_ManagementDataSet9.xss">
+      <DependentUpon>Stock_ManagementDataSet9.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20946011.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-profile-icon-free-vector-removebg-preview %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factory-worker-holding-clipboard-checking-inventory-warehouse-storage-department.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\passicon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c9d9ab9665a94f7a8f613992085befeb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c9d9ab9665a94f7a8f613992085befeb %282%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
